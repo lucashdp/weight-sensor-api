@@ -1,3 +1,6 @@
+const MongoAdapter = require('../../../adapters/mongo');
+const mongoAdapter = MongoAdapter();
+
 const SensorService = {
     getByCode
 };
