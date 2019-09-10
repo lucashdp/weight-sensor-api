@@ -2,7 +2,8 @@ const MongoAdapter = require('../../../adapters/mongo');
 const mongoAdapter = MongoAdapter();
 
 const SensorService = {
-    getByCode
+    getByCode,
+    update
 };
 
 function getByCode(query) {
@@ -26,6 +27,28 @@ function getByCode(query) {
         } catch (err) {
             console.log(err.message);
             return reject(err);
+        }
+    });
+}
+
+function update(code, sensorData) {
+    console.log('Updating sensor.');
+
+    return new Promise((resolve, reject) => {
+        try {
+            delete sensorData._id;
+            const sensorsCollection = mongoAdapter.getState().collection('sensors');
+
+            sensorsCollection
+                .findOneAndUpdate({ code }, { $set: sensorData }, { returnOriginal: false })
+                .then(sensor => resolve(sensor.value))
+                .catch(err => {
+                    console.log('edit ' + err.message);
+                    return reject(err);
+                });
+        } catch (err) {
+            console.log('edit ' + err.message);
+            return reject(err); 
         }
     });
 }
