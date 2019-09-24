@@ -10,10 +10,10 @@ Your connection string is: <code>mongodb://lucashdp:trabalho-iot@cluster0-shard-
 #### Sensors Resources
 
 ##### GET REGION
-- **[<code>GET</code> v1/public/sensors/:code](https://github.com/lucashdp/weight-sensor-api/blob/master/docs/sensors/GET_SENSORS_BY_CODE.md)**
+- **[<code>GET</code> v1/public/sensors/:code](https://github.com/lucashdp/weight-sensor-api/blob/master/docs/sensors/GET_SENSOR_BY_CODE.md)**
 
 ##### PUT REGION
-- **[<code>PUT</code> v1/public/sensors/:code](https://github.com/lucashdp/weight-sensor-api/blob/master/docs/sensors/PUT_SENSORS.md)**
+- **[<code>PUT</code> v1/public/sensors/:code](https://github.com/lucashdp/weight-sensor-api/blob/master/docs/sensors/PUT_SENSOR.md)**
 
 
 ## Pre-Requisites

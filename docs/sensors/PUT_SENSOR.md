@@ -1,4 +1,4 @@
-# Vehicles Resources
+# Sensors Resources
 
     PUT v1/public/sensors/:code
 
