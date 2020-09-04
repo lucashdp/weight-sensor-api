@@ -23,6 +23,6 @@
     "cors": "^2.8.5",
     "export-config": "^1.0.0",
     "express": "^4.17.1",
-    "mongodb": "^2.2.30"
+    "mongodb": "^3.1.13"
   }
 }
